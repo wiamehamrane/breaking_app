@@ -1,0 +1,18 @@
+import 'package:flutter/material.dart';
+
+class CharactersScreen extends StatelessWidget {
+  const CharactersScreen({super.key});
+
+void myfofo(){
+
+  
+}
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Text("data"),
+    );
+  }
+}
