@@ -1,4 +1,5 @@
 import 'package:breaking_project/const/strings.dart';
+import 'package:breaking_project/data_layer/models/character.dart';
 import 'package:dio/dio.dart';
 
 class CharctersWebServices {
@@ -11,14 +12,14 @@ class CharctersWebServices {
     dio = Dio(options);
   }
 
-  Future<List<dynamic>> getAllCharacters() async {
+  Future<Map<String, dynamic>> getAllCharacters() async {
     try {
       Response response = await dio.get('character');
       print(response.data.toString());
       return response.data;
     } catch (e) {
-      print(e.toString);
-      return [];
+      print(e.toString());
+      return {};
     }
   }
 }
