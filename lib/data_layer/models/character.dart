@@ -1,12 +1,12 @@
 class Character {
   int? id;
-  String? name;
+  String? name ;
   String? status;
   String? species;
   String? type;
   String? gender;
   String? image;
-  List<String>? episode;
+  List<String>? episode ;
   String? url;
   String? created;
 

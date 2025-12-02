@@ -1,5 +1,6 @@
 import 'package:breaking_project/business_logic_layer/cubit/characters_cubit.dart';
 import 'package:breaking_project/const/strings.dart';
+import 'package:breaking_project/data_layer/models/character.dart';
 import 'package:breaking_project/data_layer/repository/characters_repository.dart';
 import 'package:breaking_project/data_layer/web_service/charcters_web_services.dart';
 import 'package:breaking_project/presentation_layer/screens/characters_details.dart';
@@ -30,7 +31,8 @@ class AppRouter {
         );
 
       case characters_details:
-        return MaterialPageRoute(builder: (_) => Characters_details());
+        final character = settings.arguments as Character;
+        return MaterialPageRoute(builder: (_) => Characters_details(character : character));
     }
   }
 }
